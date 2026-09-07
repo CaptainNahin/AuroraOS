@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+release/
+sandbox-home/
+*.log
+.aurora-runtime/
+src/core/icons.generated.ts
+.claude/
+.gemini/
+.vscode/

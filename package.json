@@ -1,0 +1,41 @@
+{
+  "name": "auroraos",
+  "version": "1.0.0",
+  "description": "AuroraOS - a lightweight, glassmorphic desktop operating environment.",
+  "license": "MIT",
+  "keywords": [
+    "operating-system",
+    "desktop-environment",
+    "glassmorphism",
+    "typescript",
+    "web-desktop",
+    "compositor",
+    "window-manager",
+    "sandboxed",
+    "auroraos"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "icons": "node scripts/gen-icons.mjs",
+    "pretypecheck": "node scripts/gen-icons.mjs",
+    "build": "node scripts/build.mjs",
+    "build:prod": "node scripts/build.mjs --production",
+    "typecheck": "tsc --noEmit",
+    "audit:css": "node scripts/audit-css.mjs",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "check": "npm run typecheck && npm run build && npm run test",
+    "start": "node server/index.mjs",
+    "dev": "node scripts/build.mjs --watch",
+    "measure": "node scripts/measure.mjs",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "esbuild": "0.24.2",
+    "lucide-static": "0.469.0",
+    "typescript": "5.7.2"
+  }
+}
